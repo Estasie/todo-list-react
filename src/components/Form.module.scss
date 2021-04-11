@@ -1,0 +1,43 @@
+@mixin standartDecorations {
+    cursor: pointer;
+    outline: none;
+    background: none;
+}
+
+.form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-end;
+}
+
+.formInput {
+    @include standartDecorations;
+    max-width: 24rem;
+    min-width: 24rem;
+    height: 1.875rem;
+    padding: 0 0.625rem;
+    margin-left: 1rem;
+    border: none;
+    border-bottom: rgba(255, 255, 255, 0.5) solid 0.125rem;
+    color: whitesmoke;
+    font-size: 16px;
+    letter-spacing: 1px;
+    &:focus {
+        transition: border-bottom 0.2s ease-in;
+        border-bottom: rgb(255, 255, 255) solid 0.125rem;
+    }
+}
+
+.formButton{
+    color: white;
+    background: none;
+    border: none;
+    border: 2px solid white;
+    border-radius: .625rem;
+    font-size: 18px;
+    padding: .5rem;
+    outline: none;
+    cursor: pointer;
+    margin-left: 1rem;
+}

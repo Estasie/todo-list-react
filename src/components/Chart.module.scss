@@ -1,0 +1,72 @@
+.chart{
+    height: 31.25rem;
+    max-height: 31.25rem;
+    max-width: 50%;
+    font-size: .875rem;
+    font-weight: 600;
+}
+.header{
+    font-size: 1.5rem;
+    color: #fff;
+    letter-spacing: .1rem;
+}
+.chartContainer{
+    position: relative;
+    display: flex;
+    height: 80%;
+}
+
+.value{
+    height: 100%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid white;
+    padding-right: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.days{
+    display: flex;
+    align-items: flex-end;
+    min-width: 500px;
+    color: rgba(255, 255, 255, 0.6);
+
+}
+
+.daysItems{
+    padding: .5rem .5rem 0 .5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-top: 1px solid white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    span{
+        margin-left: .5rem;
+        display: inline-block;
+    }
+}
+.charts{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: flex-end;
+}
+.chartWrapper{
+    width: 100%;
+    align-items: flex-end;
+    display: flex;
+    height: 100%;
+}
+.chartInfo{
+    width: 12%;
+    height: 0px;   
+    max-height: 100%;
+    margin-right: 20px;
+    border-radius: 3px 3px 0px 0px;
+}
+
+.chartValue{
+    background: linear-gradient(#e66465, #9198e5);
+}

@@ -1,0 +1,105 @@
+@mixin placeholderStyle {
+    color: whitesmoke;
+    opacity: 0.5;
+    font-size: 16px;
+    letter-spacing: 0.125rem;
+  }
+
+@mixin todoButtonSettings {
+    border: none;
+        width: 3rem;
+        height: 3rem;
+        outline: none;
+        cursor: poiner;
+}
+.todoList{
+    margin-top: 1.25rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-height: 31.25rem;
+    min-width: 400px;
+
+    &::-webkit-scrollbar {
+        width: .5em;
+      }
+    &::-webkit-scrollbar-track {
+        border-radius: 30px;
+        background-clip: padding-box;
+      }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 30px;
+        background-color: darkgrey;
+      }
+}
+
+li{
+    display: flex;
+    width: 100%;
+    list-style: none;
+    background-color: none;
+    padding: .5rem;
+    border-radius: .625rem;
+    & + li{
+        margin-top: 0;
+    }
+
+    .completeButton {
+        @include todoButtonSettings;
+        background: url('../content/filled.png') no-repeat center;
+        background-size: 80%;
+    }
+    .checkButton{
+        @include todoButtonSettings;
+        background: url('../content/checkbox.png') no-repeat center;
+        background-size: 80%;
+    }
+    input{
+        background: none;
+        border: none;
+        width: 70%;
+        color: white;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: .1rem;
+        outline: none;
+        cursor: pointer;
+        text-overflow: ellipsis;
+        
+    }
+    .deleteButton{
+        @include todoButtonSettings;
+        background: url('../content/trash.svg') no-repeat center;
+        background-size: 80%;
+    }
+    .todoContainer {
+      max-width: 40rem;
+      text-overflow: ellipsis;
+      overflow: hidden; 
+    }
+    .editButton{
+        @include todoButtonSettings;
+        background: url('../content/edit.svg') no-repeat center;
+        background-size: 80%;
+    }
+
+    .completedItem{
+        opacity: .5;
+        text-decoration-line: line-through;
+    }
+
+}
+
+
+
+::-webkit-input-placeholder {
+    @include placeholderStyle;
+  }
+  ::-moz-placeholder {
+    @include placeholderStyle;
+  } /* Firefox 19+ */
+  :-moz-placeholder {
+    @include placeholderStyle;
+  } /* Firefox 18- */
+  :-ms-input-placeholder {
+    @include placeholderStyle;
+  }
